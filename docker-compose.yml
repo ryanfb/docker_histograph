@@ -15,6 +15,7 @@ neo4j:
    - ./neo4j-plugins:/plugins
   ports:
    - "7474:7474"
+   - "1337:1337"
 redis:
   image: redis
 elasticsearch:

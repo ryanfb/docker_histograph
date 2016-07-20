@@ -127,7 +127,7 @@ Q.all(R.map($.rimraf, $.projects))
   log('clear neo4j edges')
   return exec(['neo4j-shell',
     '-host',conf.neo4j.host,
-    '-port',conf.neo4j.port,
+    '-port','1337',
     '-c',
     'match ()-[e]-() delete e;'], false)
 })
@@ -135,7 +135,7 @@ Q.all(R.map($.rimraf, $.projects))
   log('clear neo4j nodes')
   return exec(['neo4j-shell',
     '-host',conf.neo4j.host,
-    '-port',conf.neo4j.port,
+    '-port','1337',
     '-c',
     'match (n) delete n;'], false)
 })
@@ -143,7 +143,7 @@ Q.all(R.map($.rimraf, $.projects))
   log('create neo4j schema')
   return exec(['neo4j-shell',
     '-host',conf.neo4j.host,
-    '-port',conf.neo4j.port,
+    '-port','1337',
     '-c',
     'create constraint on (n:_) assert n.id is unique'], false)
 })
