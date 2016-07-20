@@ -6,7 +6,7 @@ histograph:
    - elasticsearch
    - postgres
 neo4j:
-  image: neo4j:2.3
+  image: neo4j:2.3.5
   environment:
    - NEO4J_NO_AUTH=true
    - NEO4J_THIRDPARTY_JAXRS_CLASSES=org.waag.histograph.plugins=/histograph
