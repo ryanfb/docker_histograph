@@ -5,6 +5,8 @@ histograph:
    - redis
    - elasticsearch
    - postgres
+  ports:
+   - "3001:3001"
 neo4j:
   image: neo4j:2.3.5
   environment:
