@@ -125,17 +125,26 @@ Q.all(R.map($.rimraf, $.projects))
 })
 .then(function(){
   log('clear neo4j edges')
-  return exec(['neo4j-shell', '-c',
+  return exec(['neo4j-shell',
+    '-host',conf.neo4j.host,
+    '-port',conf.neo4j.port,
+    '-c',
     'match ()-[e]-() delete e;'], false)
 })
 .then(function(){
   log('clear neo4j nodes')
-  return exec(['neo4j-shell', '-c',
+  return exec(['neo4j-shell',
+    '-host',conf.neo4j.host,
+    '-port',conf.neo4j.port,
+    '-c',
     'match (n) delete n;'], false)
 })
 .then(function(){
   log('create neo4j schema')
-  return exec(['neo4j-shell', '-c',
+  return exec(['neo4j-shell',
+    '-host',conf.neo4j.host,
+    '-port',conf.neo4j.port,
+    '-c',
     'create constraint on (n:_) assert n.id is unique'], false)
 })
 .then(function(){
