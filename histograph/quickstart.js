@@ -103,8 +103,8 @@ var $ = {
   rimraf: runTemplate('rm -rf %s', false),
   gitClone: runTemplate('git clone https://github.com/histograph/%s', false),
   npmInstall: runDir('npm i'),
-  nodeRun: runDir('node index.js'),
-  daemon: R.curry(spawn)('node index.js'.split(' ')),
+  nodeRun: runDir('node index.js geonames tgn'),
+  daemon: R.curry(spawn)('node index.js geonames tgn'.split(' ')),
 }
 
 
