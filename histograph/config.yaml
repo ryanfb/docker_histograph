@@ -1,0 +1,27 @@
+api: 
+  admin: 
+    name: histograph
+    password: histograph
+  dataDir: "/tmp/histograph-api-data"
+
+import:
+  dirs:
+    - ../data
+
+neo4j:
+  host: neo4j
+
+redis:
+  host: redis
+
+elasticsearch:
+  host: elasticsearch
+
+data:
+  bag:
+    db:
+      host: postgres
+
+core:
+  batchTimeout: 100
+  batchSize: 250

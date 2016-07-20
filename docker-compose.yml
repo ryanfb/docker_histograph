@@ -1,0 +1,28 @@
+histograph:
+  build: histograph
+  links:
+   - neo4j
+   - redis
+   - elasticsearch
+   - postgres
+neo4j:
+  image: neo4j:2.3
+  environment:
+   - NEO4J_NO_AUTH=true
+   - NEO4J_THIRDPARTY_JAXRS_CLASSES=org.waag.histograph.plugins=/histograph
+  volumes:
+   - ./neo4j-conf:/conf
+   - ./neo4j-plugins:/plugins
+  ports:
+   - "7474:7474"
+redis:
+  image: redis
+elasticsearch:
+  image: elasticsearch
+postgres:
+  image: postgres
+  environment:
+   - POSTGRES_USER=postgres
+   - POSTGRES_PASSWORD=postgres
+  volumes:
+   - ./postgres-conf:/docker-entrypoint-initdb.d

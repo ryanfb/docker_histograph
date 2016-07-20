@@ -1,0 +1,16 @@
+{
+  "name": "histograph-quickstart",
+  "version": "0.5.0",
+  "description": "Histograph installer",
+  "main": "quickstart.js",
+  "scripts": {
+    "start": "npm i && node ./quickstart.js"
+  },
+  "author": "Jelle 'wires' Herold",
+  "license": "AGPL-1.0",
+  "dependencies": {
+    "histograph-config": "histograph/config",
+    "kew": "^0.7.0",
+    "ramda": "^0.17.1"
+  }
+}
