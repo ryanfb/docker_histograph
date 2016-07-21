@@ -32,6 +32,8 @@ redis:
   image: redis
 elasticsearch:
   image: elasticsearch
+  volumes:
+   - ./elasticsearch-config:/usr/share/elasticsearch/config
 postgres:
   image: postgres
   environment:
