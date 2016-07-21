@@ -145,7 +145,7 @@ Q.all(R.map($.rimraf, $.projects))
     '-host',conf.neo4j.host,
     '-port','1337',
     '-c',
-    'create constraint on (n:_) assert n.id is unique'], false)
+    'create constraint on (n:_) assert n.id is unique;'], false)
 })
 .then(function(){
   log('starting api, core')
