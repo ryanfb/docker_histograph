@@ -1,3 +1,13 @@
+histograph-viewer:
+  build: histograph-viewer
+  links:
+   - histograph
+  volumes_from:
+   - histograph
+  environment:
+   - HISTOGRAPH_CONFIG=/usr/src/app/config.yaml
+  ports:
+   - "3000:3000"
 histograph:
   build: histograph
   links:

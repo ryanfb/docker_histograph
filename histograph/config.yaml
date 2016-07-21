@@ -3,6 +3,7 @@ api:
     name: histograph
     password: histograph
   dataDir: "/tmp/histograph-api-data"
+  baseUrl: "http://192.168.99.100:3001"
 
 import:
   dirs:
